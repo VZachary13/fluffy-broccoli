@@ -1,6 +1,7 @@
 //51e27b761dce727f99c66d0530db9b8c
 //api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key}
-var weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=51e27b761dce727f99c66d0530db9b8c';
+var city = 'new york city';
+var weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=51e27b761dce727f99c66d0530db9b8c&units=imperial';
 
 fetch(weatherURL)
     .then(function (response) {
@@ -8,8 +9,8 @@ fetch(weatherURL)
     })
     .then(function (data) {
         console.log(data);
+        console.log(data.list[0].dt_txt);
     })
-
 
 
 setInterval(function(){

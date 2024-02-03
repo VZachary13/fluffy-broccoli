@@ -12,20 +12,23 @@
         <h1>Weather Dashboard</h1>
         <p>It is <span id="time"></span> on <span id="date"></span></p>
     </header>
+
     <section id="big-wrapper">
         <section id="search">
             <section id="search-bar">
                 <h2>Search For A City</h2>
                 <form>
-                    <input type="text" id="city-name" name="city-name" value="New York">
+                    <input type="text" id="city-name" name="city-name" placeholder="New York">
                     <input type="submit" value="Submit">
                 </form>
             </section>
+
             <section id="search-history">
                 <button>Atlanta</button>
                 <button>San Diego</button>
             </section>
         </section>
+
         <section id="weather">
             <section id="current">
                 <h2>CITY-NAME <span id="current-date"></span> <span class="weather-icon"></span></h2>
@@ -33,12 +36,14 @@
                 <p>Wind: <span id="wind"></span></p>
                 <p>Humidity: <span id="humidity"></span></p>
             </section>
+
             <section id="five-day">
                 <h2>5 Day Forecast</h2>
                 <section id="five-day-display">
                     <section id="first-box">
                         <p class="date">2/2/2024</p>
                         <p class="weather-icon"><i class="fa-solid fa-cloud"></i></p>
+                        <img src="http://openweathermap.org/img/w/10d.png" alt="sunny light rain">
                         <p>Temp: <span class="forecast-temp"></span></p>
                         <p>Wind: <span class="forecast-wind"></span></p>
                         <p>Humidity: <span class="forecast-humidity"></span></p>
@@ -79,10 +84,14 @@
 
 
     <script src="https://kit.fontawesome.com/de6d64e34e.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
     crossorigin="anonymous"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./Assets/JS/script.js"></script>
+
+    
 </body>
 </html>

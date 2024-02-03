@@ -1,6 +1,9 @@
 body {
     width: 100%;
-    
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header {
@@ -19,6 +22,12 @@ h1, header p {
 
 #five-day-display {
     justify-content: space-around;
+}
+#five-day-display section{
+    color: #fff;
+    background-color: #293453;
+    width: 150px;
+    border-radius: 9px;
 }
 
 #search, #search-bar, #weather, #search-history, form {
