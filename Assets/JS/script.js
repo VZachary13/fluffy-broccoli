@@ -13,6 +13,6 @@ fetch(weatherURL)
 
 
 setInterval(function(){
-    $('#time').text(dayjs().format('hh:mm:ss a'));
+    $('#time').text(dayjs().format('h:mm:ss a'));
     $("#date").text(dayjs().format('MMM DD, YYYY'));
 }, 1000)

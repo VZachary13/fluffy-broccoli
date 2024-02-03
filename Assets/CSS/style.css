@@ -1,10 +1,44 @@
 body {
-    width: 100px;
+    width: 100%;
+    
 }
 
 header {
-    background-color: linear-gradient(45deg, #4B3CC3, #2D2590);
+    background: linear-gradient(45deg, #595AD5, #3D329A);
+    color: #fff;
 }
-h1 {
-    color: aquamarine;
+
+h1, header p {
+    margin-left: 50%;
+}
+
+#big-wrapper, #five-day-display {
+    display: flex;
+    flex-direction: row;
+}
+
+#five-day-display {
+    justify-content: space-around;
+}
+
+#search, #search-bar, #weather, #search-history, form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#search {
+    max-width: 30%;
+}
+
+#current {
+    border: 2px solid black;
+}
+
+#current p, h2 {
+    margin-left: 5px;
+}
+
+#weather {
+    width: 68%;
 }
