@@ -18,13 +18,14 @@
             <section id="search-bar">
                 <h2>Search For A City</h2>
                 <form>
-                    <input type="text" id="testname" name="city-name" value="New York">
+                    <input type="text" id="cityname" name="city-name" placeholder="Enter Your City Here!">
                     <input id="submit" type="submit" value="Submit">
                 </form>
             </section>
 
             <section id="search-history">
             </section>
+            <button id="clearHistory">Clear History</button>
         </section>
 
         <section id="weather">
@@ -34,49 +35,48 @@
                     <img id='currentIcon' alt="weather icon">
                     <p id="current-date"></p> 
                 </div>
-                <p id="temp">Temp: <span id="temp"></span></p>
-                <p>Wind: <span id="wind"></span></p>
-                <p>Humidity: <span id="humidity"></span></p>
+                <p id="temp">Temp: <span id="tempNum"></span> F</p>
+                <p>Wind: <span id="wind"></span> mph</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
             </section>
 
             <section id="five-day">
                 <h2>5 Day Forecast</h2>
                 <section id="five-day-display">
-                    <section id="first-box">
-                        <p class="date">2/2/2024</p>
-                        <p class="weather-icon"><i class="fa-solid fa-cloud"></i></p>
-                        <img src="http://openweathermap.org/img/w/10d.png" alt="weather icon">
-                        <p>Temp: <span class="forecast-temp"></span></p>
-                        <p>Wind: <span class="forecast-wind"></span></p>
-                        <p>Humidity: <span class="forecast-humidity"></span></p>
-                    </section>
-                    <section id="second-box">
+                    <section class="five-day-box">
                         <p class="date"></p>
-                        <p class="weather-icon"></p>
-                        <p>Temp: <span class="forecast-temp"></span></p>
-                        <p>Wind: <span class="forecast-wind"></span></p>
-                        <p>Humidity: <span class="forecast-humidity"></span></p>
+                        <img alt="weather icon">
+                        <p>Temp: <span class="forecast-temp"></span> F</p>
+                        <p>Wind: <span class="forecast-wind"></span> mph</p>
+                        <p>Humidity: <span class="forecast-humidity"></span>%</p>
                     </section>
-                    <section id="third-box">
+                    <section class="five-day-box">
                         <p class="date"></p>
-                        <p class="weather-icon"></p>
-                        <p>Temp: <span class="forecast-temp"></span></p>
-                        <p>Wind: <span class="forecast-wind"></span></p>
-                        <p>Humidity: <span class="forecast-humidity"></span></p>
+                        <img alt="weather icon">
+                        <p>Temp: <span class="forecast-temp"></span> F</p>
+                        <p>Wind: <span class="forecast-wind"></span> mph</p>
+                        <p>Humidity: <span class="forecast-humidity"></span>%</p>
                     </section>
-                    <section id="fourth-box">
+                    <section class="five-day-box">
                         <p class="date"></p>
-                        <p class="weather-icon"></p>
-                        <p>Temp: <span class="forecast-temp"></span></p>
-                        <p>Wind: <span class="forecast-wind"></span></p>
-                        <p>Humidity: <span class="forecast-humidity"></span></p>
+                        <img alt="weather icon">
+                        <p>Temp: <span class="forecast-temp"></span> F</p>
+                        <p>Wind: <span class="forecast-wind"></span> mph</p>
+                        <p>Humidity: <span class="forecast-humidity"></span>%</p>
                     </section>
-                    <section id="fifth-box">
+                    <section class="five-day-box">
                         <p class="date"></p>
-                        <p class="weather-icon"></p>
-                        <p>Temp: <span class="forecast-temp"></span></p>
-                        <p>Wind: <span class="forecast-wind"></span></p>
-                        <p>Humidity: <span class="forecast-humidity"></span></p>
+                        <img alt="weather icon">
+                        <p>Temp: <span class="forecast-temp"></span> F</p>
+                        <p>Wind: <span class="forecast-wind"></span> mph</p>
+                        <p>Humidity: <span class="forecast-humidity"></span>%</p>
+                    </section>
+                    <section class="five-day-box">
+                        <p class="date"></p>
+                        <img alt="weather icon">
+                        <p>Temp: <span class="forecast-temp"></span> F</p>
+                        <p>Wind: <span class="forecast-wind"></span> mph</p>
+                        <p>Humidity: <span class="forecast-humidity"></span>%</p>
                     </section>
                 </section>
             </section>

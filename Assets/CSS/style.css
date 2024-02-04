@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     background-size: cover;
@@ -10,28 +12,37 @@ body {
 }
 
 header {
+    margin-top: 0;
     background: linear-gradient(45deg, #5959d5b5, #3c329a96);
     color: #fff;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1, header p {
-    margin-left: 50%;
+    margin: 10px;
 }
 
-#big-wrapper, #five-day-display {
+#big-wrapper  {
     display: flex;
     flex-direction: row;
 }
 
 #five-day-display {
+    display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-#five-day-display section{
+
+.five-day-box{
     color: #fff;
     background-color: #293453;
     width: 150px;
     border-radius: 9px;
+    margin: 5px 10px;
+    padding: 0px 6px;
 }
 
 #search, #search-bar, #weather, #search-history, form {
@@ -43,7 +54,8 @@ h1, header p {
 #search {
     max-width: 30%;
     border-radius: 20px;
-    background: #ffffff91;
+    background: #ffffffa3;
+    min-height: 530px;
 }
 
 #current {
@@ -62,11 +74,13 @@ h1, header p {
 }
 
 #weather {
-    width: 68%;
+    width: 75%;
     height: auto;
-    background: #ffffff91;
+    background: #ffffffa3;
     border-radius: 20px;
     padding: 10px;
+    margin-left: 1%;
+    display: none;
 }
 #little-box {
     display: flex;
@@ -76,4 +90,17 @@ h1, header p {
 #little-box p{
     font-size: larger;
     font-weight: 900;
+}
+#submit, button {
+    border-radius: 10px;
+    background-color: rgba(35, 30, 124, 0.662);
+    color:#fff;
+}
+#clearHistory {
+    margin: 5px;
+}
+@media screen and (max-width: 770px){
+    body {
+        height: 189vh;
+    }
 }
