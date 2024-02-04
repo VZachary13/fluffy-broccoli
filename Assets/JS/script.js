@@ -2,7 +2,6 @@
 $(function(){
 var city;
 var today = dayjs().format("MM/DD/YYYY");
-var todaysIcon;
 var cityList={};
     let weather = {
         apiKey: "51e27b761dce727f99c66d0530db9b8c",
@@ -17,17 +16,13 @@ var cityList={};
             $("#five-day-display").children('section').each(function(){
 
                 do {
-                    var tempIcon = data.list[counter].weather[0].icon.substr(2, 1);
-                    console.log(tempIcon);
-                    var todaysIconTemp = todaysIcon.substr(2,1);
-                    console.log(todaysIconTemp);
                     var tempDate = data.list[counter].dt_txt.slice('', 10);
                     var year = tempDate.substr(0, 4);
                     var month = tempDate.substr(5, 2);
                     var day = tempDate.substr(8, 2);
                     var date = month +"/"+ day + "/" + year;
                     counter++;
-                } while ((date == today) || (tempIcon != todaysIconTemp))
+                } while ((date == today))
                 $(this).children('.date').text(date);
                 $(this).children('img').attr('src', "http://openweathermap.org/img/w/"+data.list[counter].weather[0].icon+".png");
                 $(this).children().children('.forecast-temp').text(data.list[counter].main.temp);
@@ -43,7 +38,7 @@ var cityList={};
         },
         displayTodaysWeather: function (data) {
             console.log(data);
-            todaysIcon = data.weather[0].icon;
+            var todaysIcon = data.weather[0].icon;
             $('#city').text(data.name);
             $('#currentIcon').attr('src', "http://openweathermap.org/img/w/"+todaysIcon+".png");
             $('#current-date').text(today);
