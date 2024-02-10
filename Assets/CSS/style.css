@@ -5,12 +5,24 @@ body {
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 150vh;
     margin: 0;
     margin-top: 0;
     padding: 0;
 }
 
+/* -------------------------flexbox settings--------------------------- */
+#search, #search-bar, #weather, #search-history, form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+#big-wrapper  {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ----------------------------Header-------------------------------- */
 header {
     margin-top: 0;
     background: linear-gradient(45deg, #5959d5b5, #3c329a96);
@@ -19,38 +31,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 h1, header p {
-    margin: 10px;
+    margin: 7px;
 }
-
-#big-wrapper  {
-    display: flex;
-    flex-direction: row;
-}
-
-#five-day-display {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.five-day-box{
-    color: #fff;
-    background-color: #293453;
-    width: 150px;
-    border-radius: 9px;
-    margin: 5px 10px;
-    padding: 0px 6px;
-}
-
-#search, #search-bar, #weather, #search-history, form {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-}
-
+/* ----------------------------Search area-------------------------------- */
 #search {
     max-width: 30%;
     border-radius: 20px;
@@ -58,20 +45,17 @@ h1, header p {
     min-height: 530px;
 }
 
-#current {
-    border: 2px solid black;
-    border-radius: 20px;
+#submit, button {
+    border-radius: 10px;
+    background-color: rgba(35, 30, 124, 0.662);
+    color:#fff;
 }
 
-#current p, h2 {
-    margin-left: 5px;
+#clearHistory {
+    margin: 5px;
 }
-#current h2 {
-    margin-bottom: 0;
-}
-#temp {
-    margin-top: 0;
-}
+
+/* -----------------------------Weather display------------------------------ */
 
 #weather {
     width: 75%;
@@ -82,25 +66,70 @@ h1, header p {
     margin-left: 1%;
     display: none;
 }
+
+/* -------------------------------Today's Weather---------------------------------- */
+#current {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#current p, h2 {
+    margin-left: 5px;
+}
+
+#current h2 {
+    margin-bottom: 0;
+}
+
 #little-box {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 #little-box p{
     font-size: larger;
     font-weight: 900;
 }
-#submit, button {
-    border-radius: 10px;
-    background-color: rgba(35, 30, 124, 0.662);
-    color:#fff;
+
+#temp {
+    margin-top: 0;
 }
-#clearHistory {
-    margin: 5px;
+
+/* ------------------5 day forecast cards------------------------ */
+.five-day-box{
+    color: #fff;
+    background-color: #293453;
+    width: 150px;
+    border-radius: 9px;
+    margin: 5px 10px;
+    padding: 0px 6px;
 }
-@media screen and (max-width: 770px){
+
+#five-day-display {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#map{
+    height: 400px;
+    width: 400px;
+}
+
+/* ---------------------------media queries--------------------------- */
+@media screen and (max-width: 1213px){
     body {
-        height: 189vh;
+        height: 195vh;
+    }
+}
+@media screen and (max-width: 785px){
+    body {
+        height: 233vh;
+    }
+}
+@media screen and (max-width: 580px){
+    body {
+        height: 309vh;
     }
 }

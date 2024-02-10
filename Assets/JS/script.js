@@ -10,7 +10,6 @@ var cityList={};
             .then((data) => this.displayWeather(data))
         },
         displayWeather: function (data) {
-            console.log(data);
 
             var counter = 0;
             $("#five-day-display").children('section').each(function(){
@@ -37,7 +36,6 @@ var cityList={};
             .then((data) => this.displayTodaysWeather(data))
         },
         displayTodaysWeather: function (data) {
-            console.log(data);
             var todaysIcon = data.weather[0].icon;
             $('#city').text(data.name);
             $('#currentIcon').attr('src', "http://openweathermap.org/img/w/"+todaysIcon+".png");
@@ -46,8 +44,7 @@ var cityList={};
             $('#wind').text(data.wind.speed);
             $('#humidity').text(data.main.humidity);
         }
-    }
-;
+    };
 
 $('#submit').on('click', function(){
     city = $(this).siblings('#cityname').val();
